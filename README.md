@@ -23,7 +23,7 @@ Este projeto busca preencher essa lacuna, explorando técnicas de **visão compu
 
 ## 🛠️ Tecnologias Utilizadas
 
-- **Python 3.x**
+- **Python 3.12.10**
 - [MediaPipe](https://developers.google.com/mediapipe) – Biblioteca de visão computacional
 - [Scikit-Learn](https://scikit-learn.org/stable/) – Ferramentas de aprendizado de máquina
 - **OpenCV** – Captura e processamento de imagens
