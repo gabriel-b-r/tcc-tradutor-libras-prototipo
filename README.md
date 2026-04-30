@@ -46,13 +46,14 @@ Este projeto busca preencher essa lacuna, explorando técnicas de **visão compu
 
 ---
 
-## 📦 Instalação das Dependências
-
-Este projeto utiliza um arquivo `requirements.txt` para listar todas as bibliotecas necessárias.  
-Assim, você não precisa instalar cada pacote manualmente.
-
-1. (opcional) Crie um ambiente virtual para manter as dependências isoladas:
- - Criando o ambiente virtual:
+## 🚀 Como Executar
+1. **Clone este repositório**:
+   ```bash
+   git clone https://github.com/seuusuario/tcc-tradutor-libras-prototipo.git
+   cd tcc-tradutor-libras-prototipo
+   ```
+2. **(opcional) Crie um ambiente virtual para manter as dependências isoladas**:
+- Criando o ambiente virtual:
    ```bash
    python -m venv venv
 - Ativando o ambiente no Windows:
@@ -62,17 +63,47 @@ Assim, você não precisa instalar cada pacote manualmente.
   ```bash
   source venv/bin/activate
 
-2. Instale todas as dependências de uma vez:
+3. **Instale as dependências**:
+- Este projeto utiliza um arquivo `requirements.txt` para listar todas as bibliotecas necessárias.  
+Assim, você não precisa instalar cada pacote manualmente. 
    ```bash
    pip install -r requirements.txt
 
-O comando acima lê o arquivo requirements.txt e instala automaticamente todas as bibliotecas listadas (como opencv-python, numpy, mediapipe e scikit-learn).
-Isso garante que o ambiente esteja configurado corretamente para executar os scripts do projeto.
+4. **Coleta de imagens**:
+- Coleta de imagens que servirão como base de dados.
+- Pressione Q para iniciar a captura de cada classe.
+- Para esse projeto, foram definidas 21 classes baseadas nas configurações de mão do alfabeto manual e dos números ordinários, são 100 imagens por classe. Elas serão listadas no próximo tópico e devem ser replicadas na ordem apresentada.
+
+```bash
+python src/coleta.py
+```
+
+5. **Criação da base de dados**:
+- Utiliza as imagens da etapa anterior para extrair os pontos de referência da mão com MediaPipe, normaliza as coordenadas e salva em dados.pickle. Eles servirão como base de dados para o treinamento do modelo. 
+```bash
+python src/criacao_dados.py
+```
+
+6. **Treinamento do modelo**:
+- Treina um classificador Random Forest, exibe a acurácia e salva o modelo em modelo.p.
+```bash
+python src/treino.py
+```
+
+7. **Reconhecimento em tempo real**
+- Utiliza a webcam para detectar e classificar sinais, exibindo o caractere correspondente na tela.
+- Reproduza os sinais ilustrados no próximo tópico para ver o resultado
+
+```bash
+python src/reconhecimento.py
+```
 
 ---
 
-## 🚀 Como Executar
-Ainda vou adicionar
+## 🤟 Sinais utilizados no projeto
+- Para esse projeto, foram definidas 21 classes baseadas nas configurações de mão do alfabeto manual e dos números ordinários. Todas as configurações de mão estão listadas na imagem abaixo:
+
+![Configurações de Mão utilizadas](cm_utilizadas.png) 
 
 ---
 
