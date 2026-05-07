@@ -1,7 +1,8 @@
 # Tradutor de Libras para Português 🎥🤟
-
 Este projeto é um protótipo de **reconhecimento automático da Língua Brasileira de Sinais (Libras)**, desenvolvido como Trabalho de Conclusão de Curso em Engenharia de Software na Universidade Santo Amaro (UNISA).  
-O sistema utiliza **MediaPipe** e **Scikit-Learn** para detectar e classificar o parâmetro linguístico **Configuração de Mão (CM)** em vídeos, contribuindo para futuras soluções de tradução automática de Libras para a língua portuguesa.
+O sistema utiliza **MediaPipe**, **OpenCV** e **Scikit-Learn** para detectar e classificar o parâmetro linguístico **Configuração de Mão (CM)** em vídeos, contribuindo para futuras soluções de tradução automática de Libras para a língua portuguesa.
+
+![Resultado](resultado.gif) 
 
 ---
 
